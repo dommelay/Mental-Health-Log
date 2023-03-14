@@ -5,23 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
+        <h1>Create new entry</h1>
         <form action="/log" method="POST">
-            date: <input type="text" name="date"/>
-            emotions: <input type="text" name="emotions"/>
-            entry: <input type="text" name="entry"/>
+            <div class="row">
+                <div class="col form-group">
+                    <label for="date">date</label>
+                    <input class="form-control" type="text" name="date" id="date"/>
+                </div>
+                <div class="col form-group">
+                    <label for="emotions">emotions</label>
+                    <input class="form-control" type="text" name="emotions"/>
+                </div>
+            </div>
             <input id="feeling" type="text" name="feeling"/>
             <input id="feelingemoji" type="text" name="feelingemoji">
-            <div>
-                <img id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036" width="100px" height="auto">
-            </div>
-            <div>
-                <img id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035" width="100px" height="auto">
+            <div class="row">
+                <div class="col form-group">
+                    <lab for="entry">entry</lab>
+                    <textarea class="form-control" type="text" name="entry" rows="10"></textarea>
+                </div>
+                <div class="col">
+                    <label>How are you feeling today?</label>
+                    <div class="row">
+                    <div class="col">
+                        <img id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
+                        <h6>Happy</h6>
+                    </div>
+                    <div class="col">
+                        <img id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036">
+                        <h6>Sad</h6>
+                    </div>
+                    <div class="col">
+                        <img id="annoyed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Unamused_Face_Emoji_761d8bf8-c78c-45b1-80b1-a86a80d2452d_large.png?v=1571606036">
+                        <h6>Annoyed</h6>
+                    </div>
+                    </div>
+                    <div>
+                        <img id="embarrassed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Persevering_Face_Emoji_large.png?v=1571606037">
+                    </div>
+                    <div>
+                        <img id="proud" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Relieved_Emoji_large.png?v=1571606037">
+                    </div>
+                    <div>
+                        <img id="stressed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Face_with_Cold_Sweat_Emoji_large.png?v=1571606037">
+                    </div>
+                    <div>
+                        <img id="angry" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038">
+                    </div>
+                    <div>
+                        <img id="worried" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Worried_Face_Emoji_12fa1bbf-0297-4818-8298-d6c1a588c341_large.png?v=1571606036">
+                    </div>
+                </div>
             </div>
             <input type="submit" value="create">
         </form>

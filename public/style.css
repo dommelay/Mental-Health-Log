@@ -4,6 +4,10 @@
 #feelingemoji {
     display: none;
 }
+img {
+    width: 40px;
+    height: auto;
+}
 #emojishow {
     width: 25px;
     height: auto;

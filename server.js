@@ -25,6 +25,7 @@ app.get('/log', (req, res) => {
         })
     })
 })
+
 //create get
 app.get('/log/new', (req, res) => {
     res.render('new.ejs')
@@ -38,6 +39,7 @@ app.get('/log/:id', (req, res) => {
         })
     })
 })
+
 //edit get
 app.get('/log/:id/edit', (req, res) => {
     Log.findById(req.params.id).then((log) => {
@@ -46,6 +48,7 @@ app.get('/log/:id/edit', (req, res) => {
         })
     })
 })
+
 //create post
 app.post('/log', (req, res) => {
     Log.create(req.body).then(() => {
@@ -56,6 +59,13 @@ app.post('/log', (req, res) => {
 //delete 
 app.delete('/log/:id', (req, res) => {
     Log.findByIdAndRemove(req.params.id).then(() => {
+        res.redirect('/log')
+    })
+})
+
+//update
+app.put('/log/:id', (req, res) => {
+    Log.findByIdAndUpdate(req.params.id, req.body).then(() => {
         res.redirect('/log')
     })
 })
