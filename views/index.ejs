@@ -9,6 +9,14 @@
 </head>
 <body>
     <h1>Mental Health Log</h1>
-    <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
+    <form action="log/new">
+        <button type="submit">create</button>
+    </form>
+    <% for (let i = 0; i < log.length; i++) { %>
+        <div class="display">
+            <h4><a href="/log/<%=log[i]._id%>"><%=log[i].date%></a></h4>
+            <img src="<%=log[i].feelingemoji%>" width="50" height="auto">
+        </div>
+   <% } %>
 </body>
 </html>

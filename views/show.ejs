@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=log.date%></h1>
+    <div>
+        <form action="/log/<%=log._id%>/edit">
+            <input type="submit" value="edit">
+        </form>
+        <form action="/log/<%=log.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="delete">
+        </form>
+        <form action="/log">
+            <input type="submit" value="home">
+        </form>
+    </div>
+    <div>
+        Today I am feeling: <%=log.feeling%> <img id="emojishow" src="<%=log.feelingemoji%>">
+    </div>
+    <div>
+        Emotions: "<%=log.emotions%>"
+    </div>
+    <div>
+        Entry: "<%=log.entry%>"
+    </div>
+</body>
+</html>

@@ -1,3 +1,13 @@
-body {
-    background-color: blue;
+#feeling {
+    display: none;
+}
+#feelingemoji {
+    display: none;
+}
+#emojishow {
+    width: 25px;
+    height: auto;
+}
+.display {
+    border: solid black;
 }

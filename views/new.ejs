@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/log" method="POST">
+            date: <input type="text" name="date"/>
+            emotions: <input type="text" name="emotions"/>
+            entry: <input type="text" name="entry"/>
+            <input id="feeling" type="text" name="feeling"/>
+            <input id="feelingemoji" type="text" name="feelingemoji">
+            <div>
+                <img id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036" width="100px" height="auto">
+            </div>
+            <div>
+                <img id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035" width="100px" height="auto">
+            </div>
+            <input type="submit" value="create">
+        </form>
+    </div>
+</body>
+</html>
