@@ -26,8 +26,10 @@ img {
 #logcontent {
     padding-top: 10px;
 }
+.emojicreate {
+    padding-top: 10px;
+}
 .row1 {
-    padding-top: 15px;
     display: flex;
     flex-direction: row;
 }
