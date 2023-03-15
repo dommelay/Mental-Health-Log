@@ -12,6 +12,54 @@ img {
     width: 25px;
     height: auto;
 }
-.display {
-    border: solid black;
+#indexbox {
+    display: flex;
+    flex-direction: row;
+}
+#indextitle, #indexemoji  {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#logcontent {
+    padding-top: 10px;
+}
+.row1 {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.row2, .row3 {
+    display: flex;
+    flex-direction: row;
+}
+.rowtop {
+    padding-top: 5px;
+}
+#createnew {
+    padding-top: 10px;
+}
+p {
+    font-weight: light bold;
+}
+.col1 {
+  text-align: center;
+}
+#createbttnhome {
+    display: flex;
+    justify-content: flex-end;
+}
+#createbttnhome1 {
+    padding-top: 5px;
+}
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 14px;
+    }
+    img {
+        width: 30px;
+        height: auto;
+    }
 }
