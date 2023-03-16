@@ -14,7 +14,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create new entry</h1>
+        <div class="row">
+            <div class="col-9">
+                <h1 class="display-3">Create new entry</h1>
+            </div>
+            <div class="createbttnhome col-3">
+                <form class="createbttnhome1" action="/log">
+                    <input type="submit" value="home">
+                </form>
+            </div>
+        </div>
         <form action="/log" method="POST">
             <div class="row">
                 <div class="col form-group">
@@ -32,6 +41,9 @@
                 <div class="col form-group">
                     <lab for="entry">Entry</lab>
                     <textarea class="form-control" type="text" name="entry" rows="10"></textarea>
+                    <div id="createnew">
+                        <input type="submit" value="create">
+                    </div>
                 </div>
                 <div class="col">
                     <label>How are you feeling today?</label>
@@ -77,9 +89,6 @@
                             <p>Hopeful</p>
                         </div>
                     </div>
-                </div>
-                <div id="createnew">
-                    <input type="submit" value="create">
                 </div>
             </div>
         </form>

@@ -5,29 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <h1><%=log.date%></h1>
-    <div>
-        <form action="/log/<%=log._id%>/edit">
-            <input type="submit" value="edit">
-        </form>
-        <form action="/log/<%=log.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="delete">
-        </form>
-        <form action="/log">
-            <input type="submit" value="home">
-        </form>
-    </div>
-    <div>
-        Today I am feeling: <%=log.feeling%> <img id="emojishow" src="<%=log.feelingemoji%>">
-    </div>
-    <div>
-        Emotions: "<%=log.emotions%>"
-    </div>
-    <div>
-        Entry: "<%=log.entry%>"
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1 class="display-3"><%=log.date%></h1>
+            </div>
+            <div id="shownav" class="createbttnhome1 col-4">
+                <form action="/log/<%=log._id%>/edit">
+                    <input type="submit" value="edit">
+                </form>
+                <form id="delete" action="/log/<%=log.id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="delete">
+                </form>
+                <form action="/log">
+                    <input type="submit" value="home">
+                </form>
+            </div>
+        </div>
+        <div id="feelingtoday" class="entry">
+            <h4 class="info1">Today I am feeling: </h4>
+            <p class="info"><%=log.feeling%></p>
+            <img class="info" id="emojishow" src="<%=log.feelingemoji%>">
+        </div>
+        <div class="entry">
+           <h4 class="info1">Emotions: </h4>
+           <p class="info"><%=log.emotions%></p>
+        </div>
+        <div class="entry">
+            <h4 class="info1">Entry:</h4>
+            <p class="info"><%=log.entry%></p>
+        </div>
     </div>
 </body>
 </html>

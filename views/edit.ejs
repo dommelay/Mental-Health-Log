@@ -5,25 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1><%=log.date%></h1>
-    <form action="/log/<%=log._id%>?_method=PUT" method="POST">
-        date: <input type="text" name="date" placeholder="<%=log.date%>"/>
-        emotions: <input type="text" name="emotions" placeholder="<%=log.emotions%>"/>
-        entry: <input type="text" name="entry" placeholder="<%=log.entry%>"/>
-        <input id="feeling" type="text" name="feeling" value="<%=log.feeling%>"/>
-        <input id="feelingemoji" type="text" name="feelingemoji" value="<%=log.feelingemoji%>">
-        <div>
-            <img id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036" width="100px" height="auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h1 class="display-3"><%=log.date%></h1>
+            </div>
+            <div class="createbttnhome col-3">
+                <form class="createbttnhome1" action="/log">
+                    <input type="submit" value="home">
+                </form>
+            </div>
         </div>
-        <div>
-            <img id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035" width="100px" height="auto">
-        </div>
-        <input type="submit" value="update entry">
-    </form>
+        <form action="/log/<%=log._id%>?_method=PUT" method="POST">
+            <div class="row">
+                <div class="col form-group">
+                    <label for="date">Date</label>
+                    <input class="form-control" type="text" name="date" id="date" placeholder="<%=log.date%>"/>
+                </div>
+                <div class="col form-group">
+                    <label for="emotions">Emotions</label>
+                    <input class="form-control" type="text" name="emotions" placeholder="<%=log.emotions%>"/>
+                </div>
+            </div>
+            <input id="feeling" type="text" name="feeling"/>
+            <input id="feelingemoji" type="text" name="feelingemoji">
+            <div class="rowtop row">
+                <div class="col form-group">
+                    <lab for="entry">Entry</lab>
+                    <textarea class="form-control" type="text" name="entry" rows="10" placeholder="<%=log.entry%>"></textarea>
+                    <div id="createnew">
+                        <input type="submit" value="update entry">
+                    </div>
+                </div>
+                <div class="col">
+                    <label>How are you feeling today?</label>
+                    <div class="row1">
+                        <div id="happybox" class="col col1">
+                            <img class="emojicreate" id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
+                            <p>Happy</p>
+                        </div>
+                        <div id="sadbox" class="col col1">
+                            <img class="emojicreate" id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036">
+                            <p>Sad</p>
+                        </div>
+                        <div id="annoyedbox" class="col col1">
+                            <img class="emojicreate" id="annoyed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Unamused_Face_Emoji_761d8bf8-c78c-45b1-80b1-a86a80d2452d_large.png?v=1571606036">
+                            <p>Annoyed</p>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div id="ashamedbox" class="col1 col">
+                            <img class="emojicreate" id="ashamed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Persevering_Face_Emoji_large.png?v=1571606037">
+                            <p>Ashamed</p>
+                        </div>
+                        <div id="proudbox" class="col1 col">
+                            <img class="emojicreate" id="proud" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Relieved_Emoji_large.png?v=1571606037">
+                            <p>Proud</p>
+                        </div>
+                        <div id="stressedbox" class="col1 col">
+                            <img class="emojicreate" id="stressed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Face_with_Cold_Sweat_Emoji_large.png?v=1571606037">
+                            <p>Stressed</p>
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <div id="angrybox" class="col1 col">
+                            <img class="emojicreate" id="angry" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038">
+                            <p>Angry</p>
+                        </div>
+                        <div id="worriedbox" class="col1 col">
+                            <img class="emojicreate" id="worried" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Worried_Face_Emoji_12fa1bbf-0297-4818-8298-d6c1a588c341_large.png?v=1571606036">
+                            <p>Worried</p>
+                        </div>
+                        <div id="hopefulbox" class="col1 col">
+                            <img class="emojicreate" id="hopeful" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Shyly_Smiling_Face_Emoji_large.png?v=1571606037">
+                            <p>Hopeful</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

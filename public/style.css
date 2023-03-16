@@ -9,7 +9,7 @@ img {
     height: auto;
 }
 #emojishow {
-    width: 25px;
+    width: 40px;
     height: auto;
 }
 #indexbox {
@@ -44,21 +44,50 @@ img {
     padding-top: 10px;
 }
 p {
-    font-weight: light bold;
+   font-size:20px;
 }
 .col1 {
   text-align: center;
 }
-#createbttnhome {
+.createbttnhome {
     display: flex;
     justify-content: flex-end;
 }
-#createbttnhome1 {
-    padding-top: 5px;
+.createbttnhome1 {
+    padding-top: 10px;
+}
+#shownav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.entry {
+    padding-bottom: 15px;
+}
+#feelingtoday {
+    display: flex;
+    align-items: center;
+}
+.info {
+    padding-left: 10px;
+    margin: 0;
+}
+.info1 {
+    margin: 0;
+    text-decoration: underline;
+}
+#delete {
+    padding: 0px 5px;
+}
+.entry h4, .entry p {
+    display: inline;
 }
 @media screen and (max-width: 500px) {
     p {
         font-size: 14px;
+    }
+    .info {
+        font-size: 20px;
     }
     img {
         width: 30px;
