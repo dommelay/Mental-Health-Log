@@ -15,39 +15,39 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="toprow row">
             <div class="col-9">
                 <h1 class="display-3"><%=log.date%></h1>
             </div>
             <div class="createbttnhome col-3">
                 <form class="createbttnhome1" action="/log">
-                    <input type="submit" value="home">
+                    <input class="btn btn-secondary" type="submit" value="home">
                 </form>
             </div>
         </div>
-        <form action="/log/<%=log._id%>?_method=PUT" method="POST">
+        <form class="bottom" action="/log/<%=log._id%>?_method=PUT" method="POST">
             <div class="row">
                 <div class="col form-group">
-                    <label for="date">Date</label>
-                    <input class="form-control" type="text" name="date" id="date" placeholder="<%=log.date%>"/>
+                    <label class="formheading" for="date">Date</label>
+                    <input class="form-control" type="text" name="date" id="date" value="<%=log.date%>"/>
                 </div>
                 <div class="col form-group">
-                    <label for="emotions">Emotions</label>
-                    <input class="form-control" type="text" name="emotions" placeholder="<%=log.emotions%>"/>
+                    <label class="formheading" for="emotions">Emotions</label>
+                    <input class="form-control" type="text" name="emotions" value="<%=log.emotions%>"/>
                 </div>
             </div>
             <input id="feeling" type="text" name="feeling"/>
             <input id="feelingemoji" type="text" name="feelingemoji">
             <div class="rowtop row">
                 <div class="col form-group">
-                    <lab for="entry">Entry</lab>
-                    <textarea class="form-control" type="text" name="entry" rows="10" placeholder="<%=log.entry%>"></textarea>
+                    <label class="formheading" for="entry">Entry</label>
+                    <textarea class="form-control" type="text" name="entry" rows="12" value="<%=log.entry%>"><%=log.entry%></textarea>
                     <div id="createnew">
-                        <input type="submit" value="update entry">
+                        <input class="btn btn-secondary" type="submit" value="update entry">
                     </div>
                 </div>
                 <div class="col">
-                    <label>How are you feeling today?</label>
+                    <label class="formheading">How are you feeling today?</label>
                     <div class="row1">
                         <div id="happybox" class="col col1">
                             <img class="emojicreate" id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">

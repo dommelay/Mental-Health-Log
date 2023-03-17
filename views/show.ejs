@@ -12,19 +12,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="toprow row">
             <div class="col-8">
                 <h1 class="display-3"><%=log.date%></h1>
             </div>
-            <div id="shownav" class="createbttnhome1 col-4">
-                <form action="/log/<%=log._id%>/edit">
-                    <input type="submit" value="edit">
-                </form>
-                <form id="delete" action="/log/<%=log.id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="delete">
-                </form>
-                <form action="/log">
-                    <input type="submit" value="home">
+            <div class="col-4 createbttnhome">
+                <form class="createbttnhome1" action="/log">
+                    <input class="btn btn-secondary" type="submit" value="home">
                 </form>
             </div>
         </div>
@@ -40,6 +34,14 @@
         <div class="entry">
             <h4 class="info1">Entry:</h4>
             <p class="info"><%=log.entry%></p>
+        </div>
+        <div id="showfooter">
+            <form action="/log/<%=log._id%>/edit">
+                <input class="btn btn-secondary" type="submit" value="edit">
+            </form>
+            <form id="delete" action="/log/<%=log.id%>?_method=DELETE" method="POST">
+                <input class="btn btn-secondary" type="submit" value="delete">
+            </form>
         </div>
     </div>
 </body>

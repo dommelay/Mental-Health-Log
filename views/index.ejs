@@ -12,25 +12,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <h1 class="display-3 col-8">Mental Health Log</h1>
-            <div class="createbttnhome col-4">
-                <form class="createbttnhome1" action="log/new">
-                    <input type="submit" value="create entry">
+        <div id="indexnav" class="toprow d-flex flex-row">
+            <div id="navleft">
+            <h1 class="display-3"> Mental Health Log</h1>
+            </div>
+            <div id="navright" class="createbttnhome">
+                <form action="log/new">
+                    <input class="btn btn-secondary" type="submit" value="create entry">
                 </form>
             </div>
         </div>
-        <div id="logcontent" class="row gy-3">
+        <div id="logcontent" class="d-flex flex-row flex-wrap justify-content-evenly align-items-start">
         <% for (let i = 0; i < log.length; i++) { %>
-            <div id="display" class="col-3">
-                <div id="indexbox" class="p-2 border border-3 rounded">
-                    <div id="indextitle">
-                        <h5><a href="/log/<%=log[i]._id%>"><%=log[i].date%></a></h5>
+            <div id="display">
+                <form action="/log/<%=log[i]._id%>">
+                <button id="indexbox" class="btn btn-secondary d-flex flex-row align-items-center justify-content-evenly p-2">
+                    <div id="indextitle" class="d-flex flex-wrap text-center">
+                        <h4 class="indexdisplay display-6"><%=log[i].date%></h4>
                     </div>
                     <div id="indexemoji">
-                        <img src="<%=log[i].feelingemoji%>" width="50" height="auto">
+                        <img id="displayemoji" src="<%=log[i].feelingemoji%>" width="50" height="auto">
                     </div>
-                </div>
+                </button>
+            </form>
             </div>
         <% } %>
         </div>

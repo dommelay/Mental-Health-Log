@@ -4,27 +4,29 @@
 #feelingemoji {
     display: none;
 }
-img {
-    width: 40px;
-    height: auto;
-}
 #emojishow {
     width: 40px;
     height: auto;
 }
 #indexbox {
-    display: flex;
-    flex-direction: row;
+    width: 212px;
+    height: 112px;
 }
-#indextitle, #indexemoji  {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+img {
+    width: 50px;
+    height: auto;
+}
+#display {
+ padding-bottom: 15px;
+}
+.indexdisplay {
+    font-size: 33px;
+}
+#indexemoji {
+    padding-left: 7px;
 }
 #logcontent {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .emojicreate {
     padding-top: 10px;
@@ -40,8 +42,11 @@ img {
 .rowtop {
     padding-top: 5px;
 }
+.formheading {
+    font-size: 20px;
+}
 #createnew {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 p {
    font-size:20px;
@@ -67,6 +72,10 @@ p {
 #feelingtoday {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+}
+.bottom {
+    padding-top: 7px;
 }
 .info {
     padding-left: 10px;
@@ -77,10 +86,29 @@ p {
     text-decoration: underline;
 }
 #delete {
-    padding: 0px 5px;
+   padding-left: 7px;
 }
 .entry h4, .entry p {
     display: inline;
+}
+#showfooter form{
+    display: inline;
+}
+.toprow {
+    padding-top: 20px;
+}
+h1, h6, label, .display-3, .info1, p {
+    color: #4C4E52;
+}
+body {
+    background-color: #E6EEF7 !important;
+}
+#navleft {
+    width: 90%;
+}
+#navright {
+    width: 10%;
+    padding-top: 10px;
 }
 @media screen and (max-width: 500px) {
     p {
@@ -89,8 +117,28 @@ p {
     .info {
         font-size: 20px;
     }
-    img {
-        width: 30px;
+    #indexbox {
+        width: 150px;
+        height: 100px;
+    }
+    .indexdisplay {
+        font-size: 25px;
+    }
+    #displayemoji {
+        width: 40px;
         height: auto;
+    }
+    #indexnav {
+        flex-direction: column !important;
+    }
+    #navleft {
+        width: 100%;
+        text-align: center;
+    }
+    #navright {
+        width: 65%;
+    }
+    #logcontent {
+        padding-top: 25px;
     }
 }
