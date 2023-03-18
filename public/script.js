@@ -116,5 +116,16 @@ $('#hopeful').on('click', () => {
     $('#angrybox').css('border', 'none')
     $('#worriedbox').css('border', 'none')
 })
-
+$('#blue').on('click', () => {
+    $('html body').css('background-color', '#CEE5ED')
+})
+$('#orange').on('click', () => {
+    $('html body').css('background-color', ' #FFD9BD')
+})
+$('#green').on('click', () => {
+    $('html body').css('background-color', '#d2e7d6')
+})
+$('#purple').on('click', () => {
+    $('html body').css('background-color', '#e9e2ff')
+})
 })

@@ -49,7 +49,11 @@ img {
     padding-top: 15px;
 }
 p {
-   font-size:20px;
+   font-size:18px;
+   font-weight: bold;
+}
+.answer {
+    font-weight: normal;
 }
 .col1 {
   text-align: center;
@@ -59,7 +63,7 @@ p {
     justify-content: flex-end;
 }
 .createbttnhome1 {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 #shownav {
     display: flex;
@@ -67,7 +71,7 @@ p {
     justify-content: space-evenly;
 }
 .entry {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 #feelingtoday {
     display: flex;
@@ -78,12 +82,17 @@ p {
     padding-top: 7px;
 }
 .info {
-    padding-left: 10px;
+    padding-left: 6px;
     margin: 0;
+    font-size: 23px;
 }
 .info1 {
     margin: 0;
-    text-decoration: underline;
+    font-weight: bold;
+    font-size: 27px;
+}
+.info2 {
+    padding-left: 8px;
 }
 #delete {
    padding-left: 7px;
@@ -100,8 +109,8 @@ p {
 h1, h6, label, .display-3, .info1, p {
     color: #4C4E52;
 }
-body {
-    background-color: #E6EEF7 !important;
+html body {
+    background-color: #d2e7d6;
 }
 #navleft {
     width: 90%;
@@ -109,6 +118,32 @@ body {
 #navright {
     width: 10%;
     padding-top: 10px;
+    display: grid;
+}
+#colors {
+    padding-top: 7px;
+}
+span {
+    border-radius: 50%;
+    border: solid grey;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+#blue {
+    background-color:  #CEE5ED;
+}
+#orange {
+    background-color:  #FFD9BD;
+}
+#green {
+    background-color: #d2e7d6;
+}
+#purple {
+    background-color: #e9e2ff;
+}
+label {
+    font-weight: bold;
 }
 @media screen and (max-width: 500px) {
     p {
@@ -140,5 +175,11 @@ body {
     }
     #logcontent {
         padding-top: 25px;
+    }
+    .answer {
+        font-size: 21px;
+    }
+    #newtitle {
+        font-size: 35px;
     }
 }

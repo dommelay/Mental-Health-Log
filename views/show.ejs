@@ -14,7 +14,7 @@
     <div class="container">
         <div class="toprow row">
             <div class="col-8">
-                <h1 class="display-3"><%=log.date%></h1>
+                <h1 class="fw-bold display-3"><%=log.date%></h1>
             </div>
             <div class="col-4 createbttnhome">
                 <form class="createbttnhome1" action="/log">
@@ -24,16 +24,16 @@
         </div>
         <div id="feelingtoday" class="entry">
             <h4 class="info1">Today I am feeling: </h4>
-            <p class="info"><%=log.feeling%></p>
+            <p class="info info2 answer"><%=log.feeling%></p>
             <img class="info" id="emojishow" src="<%=log.feelingemoji%>">
         </div>
         <div class="entry">
-           <h4 class="info1">Emotions: </h4>
-           <p class="info"><%=log.emotions%></p>
+           <h4 class="info1">Emotions:</h4>
+           <p class="info answer"><%=log.emotions%></p>
         </div>
         <div class="entry">
             <h4 class="info1">Entry:</h4>
-            <p class="info"><%=log.entry%></p>
+            <p class="info answer"><%=log.entry%></p>
         </div>
         <div id="showfooter">
             <form action="/log/<%=log._id%>/edit">
