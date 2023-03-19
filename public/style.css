@@ -183,15 +183,14 @@ label {
     #newtitle {
         font-size: 35px;
     }
-    #sadbox, #proudbox, #worriedbox {
-        padding-right: 2px;
-        padding-left: 2px;
-    }
     .emojicreate {
         width: 47px;
         height: auto;
     }
     #feelingtoday {
         padding-top: 15px;
+    }
+    .info1 {
+        font-size: 26px;
     }
 }
