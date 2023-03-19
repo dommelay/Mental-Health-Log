@@ -1,2 +1,2 @@
 # Mental-Health-Log
-Full CRUD app for project 2
+I approached this project by ensuring my functionality worked first, and then prioritized styling second. I used 

@@ -22,9 +22,6 @@ img {
 .indexdisplay {
     font-size: 33px;
 }
-#indexemoji {
-    padding-left: 7px;
-}
 #logcontent {
     padding-top: 20px;
 }
@@ -145,6 +142,10 @@ span {
 label {
     font-weight: bold;
 }
+#happybox, #sadbox, #annoyedbox, #ashamedbox, #proudbox, #stressedbox, #angrybox, #worriedbox, #hopefulbox {
+    border-radius: 15px;
+    border-width: medium !important;
+}
 @media screen and (max-width: 500px) {
     p {
         font-size: 14px;
@@ -181,5 +182,16 @@ label {
     }
     #newtitle {
         font-size: 35px;
+    }
+    #sadbox, #proudbox, #worriedbox {
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    .emojicreate {
+        width: 47px;
+        height: auto;
+    }
+    #feelingtoday {
+        padding-top: 15px;
     }
 }
