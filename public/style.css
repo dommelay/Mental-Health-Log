@@ -26,7 +26,12 @@ img {
     padding-top: 20px;
 }
 .emojicreate {
+    width: 46px;
+    height: auto;
     padding-top: 10px;
+}
+#emojisbox {
+    padding-top: 5px;
 }
 .row1 {
     display: flex;
@@ -146,9 +151,13 @@ label {
     border-radius: 15px;
     border-width: medium !important;
 }
+#createnew2 {
+    padding-top: 5px;
+    display: none;
+}
 @media screen and (max-width: 500px) {
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .info {
         font-size: 20px;
@@ -192,5 +201,18 @@ label {
     }
     .info1 {
         font-size: 26px;
+    }
+    .rowtop {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    #createnew {
+        display: none;
+    }
+    #createnew2 {
+        display: block;
+    }
+    #howyoufeeling {
+        padding-top: 10px;
     }
 }

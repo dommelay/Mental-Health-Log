@@ -46,50 +46,116 @@
                         <input class="btn btn-secondary" type="submit" value="update entry">
                     </div>
                 </div>
-                <div class="col">
+                <div id="howyoufeeling" class="col">
                     <label class="formheading">How are you feeling today?</label>
-                    <div class="row1">
-                        <div id="happybox" class="col col1">
-                            <img class="emojicreate" id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
-                            <p>Happy</p>
-                        </div>
-                        <div id="sadbox" class="col col1">
-                            <img class="emojicreate" id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036">
-                            <p>Sad</p>
-                        </div>
-                        <div id="annoyedbox" class="col col1">
-                            <img class="emojicreate" id="annoyed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Unamused_Face_Emoji_761d8bf8-c78c-45b1-80b1-a86a80d2452d_large.png?v=1571606036">
-                            <p>Annoyed</p>
-                        </div>
+                    <div id="emojisbox" class="row1">
+                        <% if (log.feeling === 'Happy') { %>
+                            <div style="border: solid grey;" id="happybox" class="col col1">
+                                <img class="emojicreate" id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
+                                <p>Happy</p>
+                            </div>
+                        <% } else { %>
+                            <div id="happybox" class="col col1">
+                                <img class="emojicreate" id="happy" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1571606035">
+                                <p>Happy</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Sad') { %>
+                            <div style="border: solid grey;" id="sadbox" class="col col1">
+                                <img class="emojicreate" id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036">
+                                <p>Sad</p>
+                            </div>
+                        <% } else { %>
+                            <div id="sadbox" class="col col1">
+                                <img class="emojicreate" id="sad" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sleeping_with_Snoring_Emoji_large.png?v=1571606036">
+                                <p>Sad</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Annoyed') { %>
+                            <div style="border: solid grey;" id="annoyedbox" class="col col1">
+                                <img class="emojicreate" id="annoyed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Unamused_Face_Emoji_761d8bf8-c78c-45b1-80b1-a86a80d2452d_large.png?v=1571606036">
+                                <p>Annoyed</p>
+                            </div>
+                        <% } else { %>
+                            <div id="annoyedbox" class="col col1">
+                                <img class="emojicreate" id="annoyed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Unamused_Face_Emoji_761d8bf8-c78c-45b1-80b1-a86a80d2452d_large.png?v=1571606036">
+                                <p>Annoyed</p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="row2">
-                        <div id="ashamedbox" class="col1 col">
-                            <img class="emojicreate" id="ashamed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Persevering_Face_Emoji_large.png?v=1571606037">
-                            <p>Ashamed</p>
-                        </div>
-                        <div id="proudbox" class="col1 col">
-                            <img class="emojicreate" id="proud" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Relieved_Emoji_large.png?v=1571606037">
-                            <p>Proud</p>
-                        </div>
-                        <div id="stressedbox" class="col1 col">
-                            <img class="emojicreate" id="stressed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Face_with_Cold_Sweat_Emoji_large.png?v=1571606037">
-                            <p>Stressed</p>
-                        </div>
+                        <% if (log.feeling === 'Ashamed') { %>
+                            <div style="border: solid grey;" id="ashamedbox" class="col1 col">
+                                <img class="emojicreate" id="ashamed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Persevering_Face_Emoji_large.png?v=1571606037">
+                                <p>Ashamed</p>
+                            </div>
+                        <% } else { %>
+                            <div id="ashamedbox" class="col1 col">
+                                <img class="emojicreate" id="ashamed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Persevering_Face_Emoji_large.png?v=1571606037">
+                                <p>Ashamed</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Proud') { %>
+                            <div style="border: solid grey;" id="proudbox" class="col1 col">
+                                <img class="emojicreate" id="proud" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Relieved_Emoji_large.png?v=1571606037">
+                                <p>Proud</p>
+                            </div>
+                        <% } else { %>
+                            <div id="proudbox" class="col1 col">
+                                <img class="emojicreate" id="proud" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Relieved_Emoji_large.png?v=1571606037">
+                                <p>Proud</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Stressed') { %>
+                            <div style="border: solid grey;" id="stressedbox" class="col1 col">
+                                <img class="emojicreate" id="stressed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Face_with_Cold_Sweat_Emoji_large.png?v=1571606037">
+                                <p>Stressed</p>
+                            </div>
+                        <% } else { %>
+                            <div id="stressedbox" class="col1 col">
+                                <img class="emojicreate" id="stressed" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Face_with_Cold_Sweat_Emoji_large.png?v=1571606037">
+                                <p>Stressed</p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="row3">
-                        <div id="angrybox" class="col1 col">
-                            <img class="emojicreate" id="angry" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038">
-                            <p>Angry</p>
-                        </div>
-                        <div id="worriedbox" class="col1 col">
-                            <img class="emojicreate" id="worried" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Worried_Face_Emoji_12fa1bbf-0297-4818-8298-d6c1a588c341_large.png?v=1571606036">
-                            <p>Worried</p>
-                        </div>
-                        <div id="hopefulbox" class="col1 col">
-                            <img class="emojicreate" id="hopeful" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Shyly_Smiling_Face_Emoji_large.png?v=1571606037">
-                            <p>Hopeful</p>
-                        </div>
+                        <% if (log.feeling === 'Angry') { %>
+                            <div style="border: solid grey;" id="angrybox" class="col1 col">
+                                <img class="emojicreate" id="angry" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038">
+                                <p>Angry</p>
+                            </div>
+                        <% } else { %>
+                            <div id="angrybox" class="col1 col">
+                                <img class="emojicreate" id="angry" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Angry_Emoji_large.png?v=1571606038">
+                                <p>Angry</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Worried') { %>
+                            <div style="border: solid grey;" id="worriedbox" class="col1 col">
+                                <img class="emojicreate" id="worried" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Worried_Face_Emoji_12fa1bbf-0297-4818-8298-d6c1a588c341_large.png?v=1571606036">
+                                <p>Worried</p>
+                            </div>
+                        <% } else { %>
+                            <div id="worriedbox" class="col1 col">
+                                <img class="emojicreate" id="worried" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Worried_Face_Emoji_12fa1bbf-0297-4818-8298-d6c1a588c341_large.png?v=1571606036">
+                                <p>Worried</p>
+                            </div>
+                        <% } %>
+                        <% if (log.feeling === 'Hopeful') { %>
+                            <div style="border: solid grey;" id="hopefulbox" class="col1 col">
+                                <img class="emojicreate" id="hopeful" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Shyly_Smiling_Face_Emoji_large.png?v=1571606037">
+                                <p>Hopeful</p>
+                            </div>
+                        <% } else { %>
+                            <div id="hopefulbox" class="col1 col">
+                                <img class="emojicreate" id="hopeful" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Shyly_Smiling_Face_Emoji_large.png?v=1571606037">
+                                <p>Hopeful</p>
+                            </div>
+                        <% } %>
                     </div>
+                </div>
+                <div id="createnew2">
+                    <input class="btn btn-secondary" type="submit" value="update entry">
                 </div>
             </div>
         </form>
